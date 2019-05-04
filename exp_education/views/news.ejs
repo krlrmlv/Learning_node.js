@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>News | article</title>
+</head>
+<body>
+    <% include  blocks/header.ejs %>
+    <h1> Страница с id - <%= newsID %> </h1>
+    <h2> Title: <%= obj.title %> </h2>
+    <h3> Id: <%= obj.id %> </h2>
+
+        <ul>
+            <% obj.paragraphs.forEach(function(item) { %>
+            <li><%= item %></li>
+            <%  }); %>
+        </ul>
+</body>
+</html>
